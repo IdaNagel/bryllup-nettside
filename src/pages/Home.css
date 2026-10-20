@@ -1,0 +1,319 @@
+/* Forsiden. Alle tall i calc(N * var(--u)) er mål fra Canva (1024 bred). */
+
+/* ---------- Felles: rad med tre polaroider ---------- */
+.photo-row {
+  display: flex;
+  justify-content: center;
+  gap: calc(21 * var(--u));
+}
+
+.photo-row .polaroid {
+  width: calc(231 * var(--u));
+}
+
+/* ---------- 1. Intro ---------- */
+.intro {
+  max-width: var(--canvas);
+  min-height: calc(576 * var(--u));
+  margin: 0 auto;
+  padding-top: calc(91 * var(--u));
+  padding-bottom: calc(50 * var(--u));
+}
+
+.intro__names {
+  font-family: var(--font-display);
+  font-size: var(--fs-names);
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  color: var(--color-black);
+}
+
+.intro .photo-row {
+  margin-top: calc(45 * var(--u));
+}
+
+.intro__meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: calc(90 * var(--u));
+  padding: 0 calc(83 * var(--u));
+  font-family: var(--font-display);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+/* ---------- 2. Hero med RSVP ---------- */
+.hero {
+  position: relative;
+  min-height: calc(576 * var(--u));
+  background-color: var(--color-black);
+  background-position: center;
+  background-size: cover;
+  color: var(--color-cream);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--hero-overlay);
+}
+
+.hero__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(576 * var(--u));
+  padding: calc(71 * var(--u)) 24px calc(70 * var(--u));
+  text-align: center;
+}
+
+.hero__heading {
+  font-family: var(--font-feature);
+  font-size: var(--fs-feature);
+  font-weight: 400;
+  line-height: 1.1;
+  white-space: pre-line;
+}
+
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(213 * var(--u));
+  height: calc(51 * var(--u));
+  margin-top: calc(55 * var(--u));
+  border: 2px solid var(--color-olive);
+  font-family: var(--font-ui);
+  font-size: var(--fs-ui);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-olive);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hero__button:hover {
+  background-color: var(--color-olive);
+  color: var(--color-ink);
+}
+
+.hero__countdown {
+  margin-top: calc(70 * var(--u));
+}
+
+.hero__deadline {
+  margin-top: auto;
+  font-family: var(--font-ui);
+  font-size: var(--fs-ui);
+}
+
+/* ---------- 3. Tidsplan ---------- */
+.schedule {
+  display: grid;
+  grid-template-columns: calc(405 * var(--u)) calc(508 * var(--u));
+  grid-template-areas:
+    "header ."
+    "photos list";
+  max-width: var(--canvas);
+  min-height: calc(690 * var(--u));
+  margin: 0 auto;
+  padding-top: calc(91 * var(--u));
+}
+
+.schedule__header {
+  grid-area: header;
+  padding-left: calc(104 * var(--u));
+}
+
+.schedule__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-section-title);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.schedule__date {
+  font-size: var(--fs-schedule-date);
+}
+
+.schedule__photos {
+  grid-area: photos;
+  margin-top: calc(-9 * var(--u));
+}
+
+.schedule__photo {
+  width: calc(231 * var(--u));
+  margin-left: calc(56 * var(--u));
+}
+
+.schedule__photo + .schedule__photo {
+  position: relative;
+  margin-top: calc(-19 * var(--u));
+  margin-left: calc(88 * var(--u));
+}
+
+.schedule__list {
+  grid-area: list;
+  padding-top: calc(17 * var(--u));
+}
+
+.schedule__item {
+  display: grid;
+  grid-template-columns: calc(104 * var(--u)) 1fr;
+  padding: calc(24 * var(--u)) 0 calc(15 * var(--u));
+  border-bottom: 1px solid rgb(60 52 33 / 0.55);
+}
+
+.schedule__item:first-child {
+  padding-top: 0;
+}
+
+.schedule__item:last-child {
+  border-bottom: 0;
+}
+
+.schedule__time,
+.schedule__event {
+  font-family: var(--font-body);
+  font-size: var(--fs-schedule);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.schedule__text {
+  margin-top: calc(1 * var(--u));
+  padding-left: calc(2 * var(--u));
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- 4. Galleri ---------- */
+.gallery {
+  max-width: var(--canvas);
+  min-height: calc(576 * var(--u));
+  margin: 0 auto;
+  padding: calc(102 * var(--u)) 0 calc(108 * var(--u));
+}
+
+.gallery__heading {
+  font-family: var(--font-feature);
+  font-size: var(--fs-feature);
+  font-weight: 400;
+  line-height: 1.12;
+  text-align: center;
+  white-space: pre-line;
+  color: var(--color-ink);
+}
+
+.gallery .photo-row {
+  margin-top: calc(66 * var(--u));
+}
+
+/* ---------- Mobil ---------- */
+@media (max-width: 760px) {
+  .photo-row {
+    gap: 10px;
+    padding: 0 16px;
+  }
+
+  .photo-row .polaroid {
+    flex: 1;
+    width: auto;
+  }
+
+  .intro {
+    height: auto;
+    padding: 40px 0 36px;
+  }
+
+  .intro .photo-row {
+    margin-top: 24px;
+  }
+
+  .intro__meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: 24px;
+  }
+
+  .hero__content {
+    min-height: 560px;
+    padding: 56px 24px 40px;
+  }
+
+  .hero__heading {
+    white-space: normal;
+    max-width: 22ch;
+  }
+
+  .hero__button {
+    width: auto;
+    height: auto;
+    padding: 14px 36px;
+    margin-top: 36px;
+  }
+
+  .hero__countdown {
+    margin-top: 48px;
+  }
+
+  .hero__deadline {
+    padding-top: 40px;
+  }
+
+  .schedule {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 48px 24px 56px;
+  }
+
+  .schedule__header {
+    padding-left: 0;
+  }
+
+  .schedule__list {
+    order: 1;
+    padding-top: 32px;
+  }
+
+  .schedule__item {
+    grid-template-columns: 64px 1fr;
+    padding: 18px 0 14px;
+  }
+
+  .schedule__photos {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 40px;
+  }
+
+  .schedule__photo,
+  .schedule__photo + .schedule__photo {
+    width: 44%;
+    margin: 0;
+  }
+
+  .gallery {
+    min-height: 0;
+    padding: 48px 0 56px;
+  }
+
+  .gallery__heading {
+    white-space: normal;
+    padding: 0 24px;
+  }
+
+  .gallery .photo-row {
+    margin-top: 32px;
+  }
+}

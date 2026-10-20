@@ -1,0 +1,74 @@
+/* =========================================================
+   THEME — alle farger, fonter og størrelser samlet her.
+   Endrer du noe her, endres det på hele nettsiden.
+   ========================================================= */
+
+:root {
+  /* ---------- Farger (hentet direkte fra Canva-filen) ---------- */
+  --color-olive: #9fa157;          /* grunnfargen under papirteksturen + RSVP-knappen */
+  --color-paper: #dedcab;          /* slik oliven ser ut med tekstur på (brukes som flat bakgrunn) */
+  --color-card: rgb(204 204 156 / 0.92); /* kortene oppå bildene (gaveliste/lokalet) */
+  --color-ink: #3c3421;            /* mørkebrun hovedtekst */
+  --color-black: #000000;          /* navn, datolinje og korttitler */
+  --color-cream: #fcf5eb;          /* tekst oppå mørke bilder */
+  --color-polaroid: #f4f2ec;       /* reserve hvis polaroid-teksturen ikke lastes */
+  --polaroid-tint: #ebe5d3;        /* farge på polaroidrammen (#ffffff = helt hvit) */
+  --paper-texture-opacity: 0.45;   /* hvor sterk papirteksturen er (0–1) */
+  --hero-overlay: rgb(0 0 0 / 0.6);/* mørkt lag over hero-bildet */
+
+  /* ---------- Fonter ---------- */
+  /* Fontfilene lastes i theme.js. Lovelace (fra Canva) er en betalt font,
+     så Gloock brukes som nærmeste gratis erstatning. */
+  --font-display: "Noto Serif Display", Georgia, "Times New Roman", serif;
+  --font-feature: "Gloock", "Noto Serif Display", Georgia, serif;
+  --font-body: "Tenor Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-ui: "Open Sauce One", "Helvetica Neue", Arial, sans-serif;
+
+  /* ---------- Skala ----------
+     Canva-designet er 1024 px bredt. --u er "én Canva-piksel":
+     alle mål skrives som calc(TALL * var(--u)), der TALL er målet fra Canva.
+     Da skalerer hele siden likt med skjermen, akkurat som i Canva. */
+  --u: clamp(0.75px, calc(100vw / 1024), 1.4px);
+  --canvas: calc(1024 * var(--u));
+
+  /* ---------- Tekststørrelser (Canva-størrelse × --u) ----------
+     max() sørger for at liten tekst aldri blir mindre enn i Canva. */
+  --fs-names: calc(113 * var(--u));
+  --fs-section-title: calc(42 * var(--u));
+  --fs-feature: calc(30 * var(--u));
+  --fs-schedule: calc(20 * var(--u));
+  --fs-info-title: calc(21 * var(--u));
+  --fs-card-title-lg: calc(19 * var(--u));
+  --fs-schedule-date: calc(18 * var(--u));
+  --fs-card-title: calc(15 * var(--u));
+  --fs-meta: max(13px, calc(14 * var(--u)));
+  --fs-ui: max(13px, calc(14 * var(--u)));
+  --fs-body: max(13px, calc(13 * var(--u)));
+  --fs-card-body: max(12.7px, calc(12.7 * var(--u)));
+  --fs-small: max(11px, calc(11 * var(--u)));
+  --fs-link: max(11px, calc(9.7 * var(--u)));
+  --fs-nav: 14px;
+
+  /* ---------- Diverse ---------- */
+  --radius-card: calc(12 * var(--u));
+  --nav-height: 64px;
+  --tracking-wide: 0.2em;          /* RSVP NOW */
+  --tracking-body: 0.03em;         /* Tenor Sans brødtekst */
+}
+
+/* Mobil (samme grense som i komponent-CSS: 760px) */
+@media (max-width: 760px) {
+  :root {
+    --u: calc(100vw / 440);
+    --fs-names: clamp(52px, 17vw, 80px);
+    --fs-section-title: 34px;
+    --fs-feature: 25px;
+    --fs-schedule: 18px;
+    --fs-info-title: 20px;
+    --fs-body: 14px;
+    --fs-card-body: 14px;
+    --fs-small: 13px;
+    --fs-link: 13px;
+    --nav-height: 56px;
+  }
+}

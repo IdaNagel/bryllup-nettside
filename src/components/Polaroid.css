@@ -1,0 +1,27 @@
+/* Polaroid-ramme: papirteksturen fra Canva, bildet ligger innfelt.
+   Innfelling i % av rammen (venstre er litt bredere, bunnen litt høyere). */
+.polaroid {
+  --polaroid-rotate: 0deg;
+  position: relative;
+  aspect-ratio: 231 / 230;
+  background: var(--color-polaroid) url("../assets/images/polaroid-paper.png") center / 100% 100% no-repeat;
+  transform: rotate(var(--polaroid-rotate));
+}
+
+/* Fargelag over papiret: styres av --polaroid-tint i theme.css */
+.polaroid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--polaroid-tint);
+  mix-blend-mode: multiply;
+}
+
+.polaroid__image {
+  position: absolute;
+  top: 4.9%;
+  left: 5.9%;
+  width: 89.8%;
+  height: 88.5%;
+  object-fit: cover;
+}

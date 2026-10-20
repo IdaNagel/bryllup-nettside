@@ -1,0 +1,199 @@
+/* Felles stiler for undersidene (Gaveliste, Lokalet, Nyttig info, Svar utbedes) */
+
+/* ---------- Gaveliste-kortet ---------- */
+.gift-list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(28 * var(--u));
+  padding: calc(76 * var(--u)) calc(36 * var(--u)) calc(48 * var(--u));
+}
+
+.gift-list__name {
+  font-family: var(--font-display);
+  font-size: var(--fs-card-title);
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.gift-list__link {
+  display: inline-block;
+  margin-top: calc(6 * var(--u));
+  font-size: var(--fs-link);
+  letter-spacing: var(--tracking-body);
+  text-decoration: none;
+}
+
+.gift-list__link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Lokalet-kortet ---------- */
+.venue-card {
+  padding: calc(30 * var(--u)) calc(60 * var(--u)) calc(40 * var(--u)) calc(59 * var(--u));
+  font-size: var(--fs-card-body);
+  line-height: 1.48;
+  letter-spacing: var(--tracking-body);
+}
+
+.venue-card__name {
+  margin-left: calc(-11 * var(--u));
+  font-family: var(--font-display);
+  font-size: var(--fs-card-title-lg);
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.venue-card__address {
+  margin-top: calc(4 * var(--u));
+}
+
+.venue-card__text {
+  margin-top: calc(14 * var(--u));
+}
+
+/* ---------- Nyttig informasjon ---------- */
+.info {
+  max-width: var(--canvas);
+  margin: 0 auto;
+  padding: calc(91 * var(--u)) calc(104 * var(--u)) calc(96 * var(--u));
+}
+
+.info__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-section-title);
+  font-weight: 300;
+  line-height: 1.07;
+  text-transform: uppercase;
+  white-space: pre-line;
+}
+
+.info__grid {
+  display: grid;
+  grid-template-columns: calc(231 * var(--u)) 1fr;
+  column-gap: calc(140 * var(--u));
+  margin-top: calc(26 * var(--u));
+}
+
+.info__photos {
+  display: flex;
+  flex-direction: column;
+  gap: calc(58 * var(--u));
+  padding-top: calc(16 * var(--u));
+}
+
+.info__items {
+  display: flex;
+  flex-direction: column;
+  gap: calc(46 * var(--u));
+  max-width: calc(425 * var(--u));
+}
+
+.info-item__title {
+  font-family: var(--font-body);
+  font-size: var(--fs-info-title);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.info-item__body {
+  margin-top: calc(13 * var(--u));
+  font-size: var(--fs-body);
+  line-height: 1.385;
+  letter-spacing: 0.02em;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* ---------- Svar utbedes ---------- */
+.rsvp-page {
+  max-width: var(--canvas);
+  margin: 0 auto;
+  padding: calc(97 * var(--u)) calc(104 * var(--u));
+  text-align: center;
+}
+
+.rsvp-page__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-section-title);
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.rsvp-page__deadline {
+  margin-top: calc(12 * var(--u));
+  font-size: var(--fs-schedule-date);
+}
+
+.rsvp-page__form {
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  height: 1400px;
+  margin: calc(48 * var(--u)) auto 0;
+  border: 0;
+}
+
+.rsvp-page__placeholder {
+  margin-top: calc(48 * var(--u));
+  font-family: var(--font-feature);
+  font-size: var(--fs-feature);
+}
+
+@media (max-width: 760px) {
+  .gift-list {
+    padding: 40px 28px;
+    gap: 28px;
+  }
+
+  .gift-list__name {
+    font-size: 18px;
+  }
+
+  .venue-card {
+    padding: 32px 28px;
+  }
+
+  .venue-card__name {
+    margin-left: 0;
+    font-size: 21px;
+  }
+
+  .info {
+    padding: 48px 24px 64px;
+  }
+
+  .info__grid {
+    grid-template-columns: 1fr;
+    margin-top: 32px;
+  }
+
+  /* Bildene legger seg på rad over tekstene på mobil */
+  .info__photos {
+    flex-direction: row;
+    gap: 12px;
+    padding-top: 0;
+    margin-bottom: 36px;
+  }
+
+  .info__photos .polaroid {
+    flex: 1;
+  }
+
+  .info__items {
+    max-width: none;
+    gap: 36px;
+  }
+
+  .info-item__body {
+    text-align: left;
+  }
+
+  .rsvp-page {
+    padding: 48px 24px 64px;
+  }
+}
