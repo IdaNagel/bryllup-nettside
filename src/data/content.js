@@ -79,8 +79,8 @@ export const home = {
       },
       {
         time: "22:00",
-        title: "Kakekutting, dans og fest",
-        text: "Middagen avsluttes med kakebord før det ryddes plass til dansegulv",
+        title: "Dans og fest",
+        text: "Middagen avslutte etter kakebord før det ryddes plass til dansegulv, musikk og fest",
       },
     ],
   },
@@ -150,7 +150,7 @@ export const info = {
     {
       title: "Overnatting",
       paragraphs: [
-        "Brudeparet kommer til å sove på Hotel Norge. Målet er å få til en frokost på søndagen om formen tillater slikt, andre gjester bor også der",
+        "Brudeparet kommer til å sove på Hotel Norge. Målet er å få til en frokost på søndagen i hotellets restaurant om formen tillater det.",
       ],
     },
     {
@@ -162,13 +162,13 @@ export const info = {
     {
       title: "Tale",
       paragraphs: [
-        "Om du ønsker å holde en tale ber vi deg ta kontakt med Ida i forkant av bryllupet. Det kommer ikke til å være rom for spontane taler så alt må være meldt inn på forhånd",
+        "Om du ønsker å holde en tale ber vi deg ta kontakt med Ida i forkant av bryllupet. Det kommer ikke til å være rom for spontane taler så alt må være meldt inn på forhånd.",
       ],
     },
   ],
 };
 
 export const contacts = [
-  { name: "Ida", phone: "+47 000 00 000", email: "ida@eksempel.no" },
-  { name: "Jonas", phone: "+47 000 00 000", email: "jonas@eksempel.no" },
+  { name: "Ida", phone: "+47 948 07 322", email: "ida.nagel.fredriksen@gmail.com" },
+  { name: "Jonas", phone: "+47 975 22 704", email: "jonas.stris@gmail.com" },
 ];
