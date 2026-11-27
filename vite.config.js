@@ -10,5 +10,5 @@ export default defineConfig({
   ],
   // Hvis du vil klargjøre for GitHub Pages senere, 
   // kan vi sette: base: '/bryllup-nettside/' (eller '/' om du har eget domene)
-  base: './',
+  base: '/',
 })
